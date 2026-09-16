@@ -1,2 +1,58 @@
-# immunotox-ai
+# ImmunoToxAI
 AI-powered immunotoxicity and adverse event risk assessment for early-stage drug development.
+
+## Predictive Immunotoxicity and Adverse Event Risk Assessment for Early Drug Development
+
+ImmunoToxAI is a portfolio-ready biotech ML project that connects:
+
+**Tox21 molecular assay evidence → ML toxicity prediction → FAERS pharmacovigilance signals → interpretable integrated risk prioritization**
+
+### Scientific objective
+The system is designed to help R&D teams prioritize candidates for additional safety investigation. It is a decision-support and hypothesis-generation system, not a clinical causality engine.
+
+### Data
+Place the supplied datasets here:
+```text
+data/raw/tox21/tox21.csv
+data/raw/faers/fda_adverse_events_2015_2026_CLEAN.csv
+```
+
+### Run order
+1. `01_Tox21_EDA.ipynb`
+2. `02_Molecular_Features.ipynb`
+3. `03_Toxicity_Model.ipynb`
+4. `04_FAERS_EDA.ipynb`
+5. `05_AE_Signal_Detection.ipynb`
+6. `06_Integrated_Risk_Engine.ipynb`
+
+### Install
+```bash
+python -m pip install -r requirements.txt
+```
+
+### Tests
+```bash
+pytest -q
+```
+
+### Dashboard
+```bash
+streamlit run dashboard/app.py
+```
+
+### Project principles
+- Reproducible paths and configuration.
+- Missing labels treated as unknown.
+- Scaffold-aware validation where feasible.
+- PR-AUC emphasized for imbalanced endpoints.
+- Probability calibration for selected models.
+- SHAP for model interpretation.
+- Transparent FAERS disproportionality metrics.
+- Explicit separation between association, signal detection, and causality.
+- Domain-expert review required before operational use.
+
+### Important limitations
+FAERS is subject to reporting bias, confounding, missing exposure denominators, and other pharmacovigilance limitations. Tox21 is a collection of pathway-level assays and does not represent all human immunotoxicity. The integrated score is a prioritization score, not a clinical risk probability.
+
+### Portfolio positioning
+This repository demonstrates practical skills across cheminformatics, classical ML, model evaluation, explainable AI, pharmacovigilance analytics, reproducible engineering, and biotech decision-support design.
