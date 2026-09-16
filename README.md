@@ -56,3 +56,81 @@ FAERS is subject to reporting bias, confounding, missing exposure denominators, 
 
 ### Portfolio positioning
 This repository demonstrates practical skills across cheminformatics, classical ML, model evaluation, explainable AI, pharmacovigilance analytics, reproducible engineering, and biotech decision-support design.
+
+## 📁 Project Structure
+
+```text
+ImmunoToxAI/
+│
+├── data/
+│   ├── raw/
+│   │   ├── tox21/
+│   │   ├── faers/
+│   │   └── drug_mapping/
+│   ├── processed/
+│   │   ├── tox21/
+│   │   ├── faers/
+│   │   └── integrated/
+│   └── reference/
+│       ├── immune_ae_dictionary.csv
+│       ├── drug_name_synonyms.csv
+│       └── pathway_weights.yaml
+│
+├── configs/
+│   ├── config.yaml
+│   ├── tox21.yaml
+│   └── faers.yaml
+│
+├── notebooks/
+│   ├── 01_Tox21_EDA.ipynb
+│   ├── 02_Molecular_Features.ipynb
+│   ├── 03_Toxicity_Model.ipynb
+│   ├── 04_FAERS_EDA.ipynb
+│   ├── 05_AE_Signal_Detection.ipynb
+│   └── 06_Integrated_Risk_Engine.ipynb
+│
+├── src/
+│   ├── __init__.py
+│   ├── preprocessing.py
+│   ├── molecular_features.py
+│   ├── tox21_model.py
+│   ├── faers_signals.py
+│   ├── drug_mapping.py
+│   ├── risk_engine.py
+│   ├── evaluation.py
+│   └── visualization.py
+│
+├── models/
+│   ├── tox21/
+│   │   ├── tox21_multitask_model.pkl
+│   │   ├── calibration_models/
+│   │   └── metadata.json
+│   └── faers/
+│       ├── ae_signal_model.pkl
+│       └── metadata.json
+│
+├── dashboard/
+│   └── app.py
+│
+├── reports/
+│   ├── figures/
+│   └── model_cards/
+│
+├── docs/
+│   ├── data_dictionary.md
+│   ├── methodology.md
+│   ├── model_card.md
+│   └── limitations.md
+│
+├── tests/
+│   ├── test_preprocessing.py
+│   ├── test_molecular_features.py
+│   ├── test_faers_signals.py
+│   └── test_risk_engine.py
+│
+├── .gitignore
+├── README.md
+├── requirements.txt
+└── LICENSE
+```
+
