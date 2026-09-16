@@ -1,0 +1,12 @@
+project_name: ImmunoToxAI
+random_state: 42
+paths:
+  tox21_raw: data/raw/tox21/tox21.csv
+  faers_raw: data/raw/faers/fda_adverse_events_2015_2026_CLEAN.csv
+  tox21_processed: data/processed/tox21
+  faers_processed: data/processed/faers
+  integrated_processed: data/processed/integrated
+  tox21_models: models/tox21
+  faers_models: models/faers
+  figures: reports/figures
+  model_cards: reports/model_cards

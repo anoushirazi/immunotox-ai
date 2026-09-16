@@ -1,0 +1,20 @@
+signal_detection:
+  min_count: 3
+  evans_prr: 2.0
+  evans_chi2: 4.0
+immune_terms:
+  - hypersensitivity
+  - anaphylaxis
+  - anaphylactic
+  - immune
+  - immun
+  - autoimmune
+  - cytokine
+  - urticaria
+  - angioedema
+  - allergic
+  - allergy
+  - serum sickness
+  - vasculitis
+  - immune-mediated
+  - interstitial nephritis

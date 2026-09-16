@@ -1,0 +1,14 @@
+morgan:
+  radius: 2
+  n_bits: 2048
+split:
+  method: scaffold
+  test_size: 0.20
+  validation_size: 0.20
+model:
+  type: random_forest
+  n_estimators: 500
+  class_weight: balanced_subsample
+  min_samples_leaf: 2
+calibration:
+  method: isotonic
