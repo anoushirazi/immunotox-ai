@@ -22,7 +22,7 @@ data/raw/faers/fda_adverse_events_2015_2026_CLEAN.csv
 - Official source: FDA FAERS database URL: [[Kaggle](https://www.kaggle.com/datasets/kanchana1990/fda-drug-adverse-event-reports-2015-to-2026-faers)]
 
 ### Tox21
-- Official source: EPA Tox21 URL: [Kaggle](https://www.kaggle.com/datasets/epicskills/tox21-dataset)]
+- Official source: EPA Tox21 URL: [[Kaggle](https://www.kaggle.com/datasets/epicskills/tox21-dataset)]
 
 ### Processed-raw-reference
 - Processed/downloadable project copy: [[Google Drive](https://drive.google.com/file/d/1g9aNf-jI7yID-kNxmN-kzNlj9jdVNUIM/view?usp=sharing)]
