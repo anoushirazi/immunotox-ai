@@ -592,7 +592,6 @@ Run:
 
 ```bash
 streamlit run dashboard/app.py
-
 ```
 
 The dashboard is intended to make model and pharmacovigilance outputs easier to inspect without requiring users to work directly inside the notebooks.
@@ -605,15 +604,14 @@ Run the automated test suite with:
 
 ```bash
 pytest -q
-
 ```
 
 Tests cover core components such as:
 
-- Data preprocessing
-- Molecular feature generation
-- FAERS signal calculations
-- Risk-engine logic
+* Data preprocessing
+* Molecular feature generation
+* FAERS signal calculations
+* Risk-engine logic
 
 ---
 
@@ -626,17 +624,16 @@ configs/
 ├── config.yaml
 ├── tox21.yaml
 └── faers.yaml
-
 ```
 
 This makes it easier to modify:
 
-- Input paths
-- Model parameters
-- Thresholds
-- Signal-detection settings
-- Feature-processing options
-- Risk-engine weights
+* Input paths
+* Model parameters
+* Thresholds
+* Signal-detection settings
+* Feature-processing options
+* Risk-engine weights
 
 without changing the core source code.
 
@@ -644,91 +641,92 @@ without changing the core source code.
 
 # 🛡️ Project Principles
 
-ImmunoToxAI follows several principles intended to make the analysis reproducible and scientifically interpretable.
+ImmunoToxAI follows principles designed to make the analysis reproducible, interpretable, and scientifically responsible.
 
 ### Reproducibility
 
-Data paths, configuration, preprocessing, and model settings are separated and documented.
+Data paths, configuration, preprocessing, and model settings are separated and documented to support reproducible experimentation.
 
-### Leakage-aware modeling
+### Leakage-Aware Modeling
 
-Train/test separation and preprocessing are designed to reduce information leakage.
+Train/test separation and preprocessing are designed to reduce information leakage and provide more reliable evaluation.
 
-### Scaffold-aware validation
+### Scaffold-Aware Validation
 
 Where molecular structure information permits, scaffold-aware validation can be used to provide a more realistic estimate of generalization to chemically distinct compounds.
 
-### Appropriate metrics
+### Appropriate Metrics
 
-PR-AUC and other class-imbalance-aware metrics are emphasized instead of relying solely on accuracy.
+PR-AUC and other class-imbalance-aware metrics are emphasized rather than relying solely on accuracy.
 
-### Probability calibration
+### Probability Calibration
 
 Selected models can be calibrated to improve the interpretation of predicted probabilities.
 
 ### Explainability
 
-SHAP and other interpretation techniques are used to investigate model behavior.
+SHAP and other interpretation techniques are used to investigate model behavior and identify the features contributing to predictions.
 
-### Transparent pharmacovigilance
+### Transparent Pharmacovigilance
 
 FAERS signal calculations are kept explicit rather than hidden inside an opaque risk score.
 
-### Evidence separation
+### Evidence Separation
 
-The project explicitly distinguishes:
+The project explicitly distinguishes between different levels of computational evidence:
 
 ```text
 Prediction ≠ Association ≠ Signal ≠ Causality
-
 ```
 
-### Human review
+A model prediction or pharmacovigilance signal should not automatically be interpreted as evidence of causality.
 
-Domain experts should review potentially important findings before any operational or scientific decision is made.
+### Human Review
+
+Potentially important findings should be reviewed by qualified domain experts before being used for scientific, clinical, or regulatory decision-making.
 
 ---
 
 # ⚠️ Limitations
 
-## Tox21 limitations
+## Tox21 Limitations
 
 Tox21 provides valuable high-throughput experimental evidence, but it does not represent the complete biological complexity of human immunotoxicity.
 
 Limitations include:
 
-- Assay-specific endpoints
-- In-vitro experimental conditions
-- Limited representation of human physiology
-- Missing or uncertain labels
-- Class imbalance
-- Potential distribution shift between training compounds and new compounds
+* Assay-specific endpoints
+* In-vitro experimental conditions
+* Limited representation of human physiology
+* Missing or uncertain labels
+* Class imbalance
+* Potential distribution shift between training compounds and new compounds
 
-Therefore, a model prediction should be interpreted as computational evidence rather than a definitive biological conclusion.
+Therefore, model predictions should be interpreted as **computational evidence**, not definitive biological conclusions.
 
 ---
 
-## FAERS limitations
+## FAERS Limitations
 
 FAERS is based primarily on spontaneous adverse-event reporting.
 
 Important limitations include:
 
-- Reporting bias
-- Under-reporting
-- Missing exposure denominators
-- Confounding
-- Duplicate or incomplete reports
-- Changes in reporting behavior
-- Differences in reporting rates across drugs and events
+* Reporting bias
+* Under-reporting
+* Missing exposure denominators
+* Confounding
+* Duplicate or incomplete reports
+* Changes in reporting behavior
+* Differences in reporting rates across drugs and events
 
-A statistically significant disproportionality signal does not prove that the drug caused the event.
+A statistically significant disproportionality signal does **not** establish that a drug caused the reported event.
 
 ---
 
 ## Integrated Risk Score Limitations
 
-The integrated score combines multiple sources of evidence for **prioritization**.
+The integrated score combines multiple sources of evidence for **safety-signal prioritization**.
 
 It is not:
 
@@ -738,10 +736,9 @@ Clinical Risk Probability
 Causal Risk Estimate
         ≠
 Regulatory Decision
-
 ```
 
-The score should therefore be interpreted as a ranking/prioritization mechanism for additional investigation.
+The score should therefore be interpreted as a **prioritization mechanism for further investigation**, rather than a definitive measure of clinical or causal risk.
 
 ---
 
@@ -767,7 +764,6 @@ Calibration
 Interpretability
      ↓
 Domain Review
-
 ```
 
 A model with slightly lower discrimination but substantially better calibration or interpretability may be more useful for scientific investigation than a black-box model optimized for a single metric.
@@ -784,18 +780,17 @@ docs/
 ├── methodology.md
 ├── model_card.md
 └── limitations.md
-
 ```
 
 These documents provide additional information about:
 
-- Dataset fields
-- Target definitions
-- Modeling methodology
-- Evaluation strategy
-- Model limitations
-- Intended use
-- Risk considerations
+* Dataset fields
+* Target definitions
+* Modeling methodology
+* Evaluation strategy
+* Model limitations
+* Intended use
+* Risk considerations
 
 ---
 
@@ -803,63 +798,63 @@ These documents provide additional information about:
 
 ImmunoToxAI demonstrates an end-to-end applied machine-learning workflow for the biotech and pharmaceutical domain.
 
-### Technical skills demonstrated
+### Technical Skills Demonstrated
 
 **Data Science**
 
-- Python
-- Pandas
-- NumPy
-- Exploratory Data Analysis
-- Statistical analysis
+* Python
+* Pandas
+* NumPy
+* Exploratory Data Analysis
+* Statistical analysis
 
 **Machine Learning**
 
-- Classification
-- Ensemble models
-- Multitask learning
-- Imbalanced learning
-- Probability calibration
-- Model evaluation
+* Classification
+* Ensemble models
+* Multitask learning
+* Imbalanced learning
+* Probability calibration
+* Model evaluation
 
 **Explainable AI**
 
-- SHAP
-- Feature importance
-- Model interpretation
+* SHAP
+* Feature importance
+* Model interpretation
 
 **Cheminformatics**
 
-- Molecular descriptors
-- Molecular fingerprints
-- Structure-derived features
+* Molecular descriptors
+* Molecular fingerprints
+* Structure-derived features
 
 **Pharmacovigilance**
 
-- FAERS analysis
-- Adverse-event analysis
-- Disproportionality analysis
-- Safety signal detection
+* FAERS analysis
+* Adverse-event analysis
+* Disproportionality analysis
+* Safety signal detection
 
 **Data Engineering**
 
-- Reproducible pipelines
-- Configuration management
-- Data preprocessing
-- Dataset mapping
+* Reproducible pipelines
+* Configuration management
+* Data preprocessing
+* Dataset mapping
 
 **Software Engineering**
 
-- Modular Python source code
-- Unit testing
-- Configuration files
-- Git/GitHub workflow
+* Modular Python source code
+* Unit testing
+* Configuration files
+* Git/GitHub workflow
 
 **Deployment**
 
-- Streamlit
-- Model artifacts
-- Interactive risk exploration
+* Streamlit
+* Model artifacts
+* Interactive risk exploration
 
 ---
 
@@ -867,26 +862,98 @@ ImmunoToxAI demonstrates an end-to-end applied machine-learning workflow for the
 
 ImmunoToxAI is intended for:
 
-- Research and educational purposes
-- ML portfolio demonstration
-- Hypothesis generation
-- Candidate safety prioritization
-- Exploratory pharmacovigilance analysis
-- Demonstration of explainable biotech ML workflows
+* Research and educational purposes
+* Machine-learning portfolio demonstration
+* Hypothesis generation
+* Candidate safety prioritization
+* Exploratory pharmacovigilance analysis
+* Demonstration of explainable biotech ML workflows
 
 It is **not intended for**:
 
-- Clinical diagnosis
-- Patient-level medical decisions
-- Regulatory approval decisions
-- Establishing drug-event causality
-- Replacing toxicology or pharmacovigilance experts
+* Clinical diagnosis
+* Patient-level medical decisions
+* Regulatory approval decisions
+* Establishing drug-event causality
+* Replacing toxicology or pharmacovigilance experts
+
+---
+
+# 🧠 Project Purpose & Philosophy
+
+The goal of ImmunoToxAI is **not to claim that AI can determine whether a drug is safe or unsafe**.
+
+Instead, the system is designed as an **AI-assisted pharmacovigilance and safety-analysis framework** that brings together molecular evidence, experimental toxicity data, and real-world adverse-event signals to identify potentially important safety patterns.
+
+The core workflow is:
+
+```text
+Detect
+  ↓
+Quantify
+  ↓
+Explain
+  ↓
+Prioritize
+  ↓
+Investigate
+```
+
+### Detect
+
+Identify potentially meaningful patterns across molecular, experimental, and adverse-event data.
+
+### Quantify
+
+Estimate the strength or relative importance of detected signals using machine-learning models and pharmacovigilance analytics.
+
+### Explain
+
+Provide interpretable evidence showing why a compound, drug, or safety signal was flagged.
+
+### Prioritize
+
+Use the available evidence to identify candidates that may warrant deeper scientific investigation.
+
+### Investigate
+
+Support researchers and domain experts in subsequent scientific evaluation rather than replacing their judgment.
+
+### Example
+
+If a particular drug is associated with an unusual increase in reports of a specific adverse event, ImmunoToxAI can:
+
+1. Detect the potential safety pattern.
+2. Quantify the strength of the signal.
+3. Analyze the evidence contributing to the finding.
+4. Prioritize the signal for further investigation.
+5. Present the result for review by qualified researchers or safety professionals.
+
+Importantly, the system does **not** conclude that the drug caused the adverse event.
+
+Instead:
+
+```text
+Potential Pattern
+       ↓
+Computational Signal
+       ↓
+Evidence & Explanation
+       ↓
+Prioritization
+       ↓
+Expert Investigation
+```
+
+This distinction is central to the project:
+
+> **AI can help surface potentially important safety signals earlier and make the evidence behind them easier to investigate. It should not be treated as a substitute for scientific, clinical, or regulatory judgment.**
 
 ---
 
 # 📌 Key Takeaway
 
-ImmunoToxAI demonstrates how heterogeneous safety evidence can be connected into a reproducible computational workflow:
+ImmunoToxAI connects heterogeneous safety evidence into a reproducible computational workflow:
 
 ```text
 Molecular Evidence
@@ -901,14 +968,11 @@ Pharmacovigilance Analytics
         +
 Explainable AI
         ↓
-Integrated Safety Prioritization
+Integrated Safety-Signal Prioritization
         ↓
 Human / Domain-Expert Review
-
 ```
 
-The central idea is not to claim that AI can determine whether a drug is safe.
+The practical objective is to **identify potentially important safety patterns earlier, explain the evidence behind them, and prioritize candidates for deeper scientific investigation**.
 
-The goal is more practical:
-
-> **Use machine learning and pharmacovigilance analytics to identify potentially important safety patterns earlier, explain the evidence behind those patterns, and prioritize candidates for deeper scientific investigation.**
+It is therefore best understood as an **AI-assisted safety-signal discovery and prioritization system**, rather than an automated system for determining whether a drug is safe or unsafe.
