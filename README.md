@@ -1,33 +1,4 @@
 # ImmunoToxAI
-AI-powered immunotoxicity and adverse event risk assessment for early-stage drug development.
-
-## Predictive Immunotoxicity and Adverse Event Risk Assessment for Early Drug Development
-
-ImmunoToxAI is a portfolio-ready biotech ML project that connects:
-
-**Tox21 molecular assay evidence → ML toxicity prediction → FAERS pharmacovigilance signals → interpretable integrated risk prioritization**
-
-### Scientific objective
-The system is designed to help R&D teams prioritize candidates for additional safety investigation. It is a decision-support and hypothesis-generation system, not a clinical causality engine.
-
-### Data
-Place the supplied datasets here:
-```text
-data/raw/tox21/tox21.csv
-data/raw/faers/fda_adverse_events_2015_2026_CLEAN.csv
-```
-## Data Sources
-
-### FAERS
-- Official source: FDA FAERS database URL: [[Kaggle](https://www.kaggle.com/datasets/kanchana1990/fda-drug-adverse-event-reports-2015-to-2026-faers)]
-
-### Tox21
-- Official source: EPA Tox21 URL: [[Kaggle](https://www.kaggle.com/datasets/epicskills/tox21-dataset)]
-
-### Processed-raw-reference
-- Processed/downloadable project copy: [[Google Drive](https://drive.google.com/file/d/1g9aNf-jI7yID-kNxmN-kzNlj9jdVNUIM/view?usp=sharing)]
-
-# ImmunoToxAI
 
 ## AI-Powered Immunotoxicity and Adverse Event Risk Assessment for Early-Stage Drug Development
 
