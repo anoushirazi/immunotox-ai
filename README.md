@@ -169,7 +169,8 @@ data/raw/faers/fda_adverse_events_2015_2026_CLEAN.csv
 
 ```
 
-The repository intentionally separates raw, processed, reference, and model-generated data.
+The repository intentionally separates raw, processed, reference, and model-generated data. 
+[[Download](https://drive.google.com/file/d/1z6Js1NkctPtapopVSVquN_vhRdD7UrXg/view?usp=sharing)]
 
 Recommended structure:
 
