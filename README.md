@@ -553,11 +553,12 @@ ImmunoToxAI/
 Clone the repository and install the required dependencies:
 
 ```bash
-git clone <repository-url>
-cd ImmunoToxAI
-
+git clone https://github.com/anoushirazi/immunotox-ai.git
+cd immunotox-ai
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-
 ```
 
 ---
