@@ -4,7 +4,7 @@
 
 The Streamlit dashboard provides an interactive interface for exploring toxicity predictions, adverse-event signals, and integrated risk analysis.
 
-[▶️ Watch Dashboard Demo](assets/dashboard-demo.gif)
+![Demo](assets/dashboard-demo.mp4)
 
 ## AI-Powered Immunotoxicity and Adverse Event Risk Assessment for Early-Stage Drug Development
 
