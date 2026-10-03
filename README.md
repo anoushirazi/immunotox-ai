@@ -1,5 +1,11 @@
 # ImmunoToxAI
 
+## 🖥️ Interactive Streamlit Dashboard
+
+The Streamlit dashboard provides an interactive interface for exploring toxicity predictions, adverse-event signals, and integrated risk analysis.
+
+![ImmunoToxAI Dashboard Demo](assets/dashboard-demo.mp4)
+
 ## AI-Powered Immunotoxicity and Adverse Event Risk Assessment for Early-Stage Drug Development
 
 **ImmunoToxAI** is an end-to-end biotech machine learning project that combines **molecular toxicity prediction** with **real-world pharmacovigilance signals** to help prioritize drug candidates for additional safety investigation.
