@@ -523,6 +523,9 @@ ImmunoToxAI/
 ├── dashboard/
 │   └── app.py
 │
+├── assets/
+│   └── dashboard-demo.mp4
+│
 ├── reports/
 │   ├── figures/
 │   └── model_cards/
