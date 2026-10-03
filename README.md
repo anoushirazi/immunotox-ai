@@ -530,7 +530,7 @@ ImmunoToxAI/
 │   └── app.py
 │
 ├── assets/
-│   └── dashboard-demo.mp4
+│   └── dashboard-demo.gif
 │
 ├── reports/
 │   ├── figures/
